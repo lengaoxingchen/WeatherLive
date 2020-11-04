@@ -1,6 +1,7 @@
 package cn.testrunner.live.logic
 
 import androidx.lifecycle.liveData
+import cn.testrunner.live.logic.dao.PlaceDao
 import cn.testrunner.live.logic.model.Place
 import cn.testrunner.live.logic.model.Weather
 import cn.testrunner.live.logic.network.WeatherLiveNetWork
@@ -56,6 +57,13 @@ object Repository {
         }
 
     }
+
+
+    fun savePlace(place: Place) = PlaceDao.savePlace(place)
+
+    fun getSavesPlace() = PlaceDao.getSavedPlace()
+
+    fun isPlaceSaved() = PlaceDao.isPlaceSaved()
 
     //对try...catch进行统一的封装
     private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) = liveData<Result<T>>(context) {
