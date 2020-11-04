@@ -35,4 +35,11 @@ object WeatherLiveNetWork {
             })
         }
     }
+
+    //封装WeatherService接口
+    private val weatherService = ServiceCreator.create(WeatherService::class.java)
+
+    suspend fun getRealtimeWeather(lng: String, lat: String) = weatherService.getRealtimeWeather(lng, lat).await()
+
+    suspend fun getDailyWeather(lng: String, lat: String) = weatherService.getDailyWeather(lng, lat).await()
 }
