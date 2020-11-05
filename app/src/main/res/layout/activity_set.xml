@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.weather.SetActivity">
+    <RelativeLayout
+            android:id="@+id/titleRL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#DCDCDC">
+        <ImageView
+                android:id="@+id/backIV"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@mipmap/icon_back"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true"
+                  android:text="@string/setting"
+                  android:textSize="18sp"
+                  android:textStyle="bold"/>
+    </RelativeLayout>
+    <ImageView
+            android:id="@+id/setLine1"
+            style="@style/setImage"
+            android:layout_below="@id/titleRL"/>
+    <TextView
+            android:id="@+id/sharedTv"
+            style="@style/setText"
+            android:layout_below="@id/setLine1"
+            android:drawableStart="@mipmap/more_share"
+            android:drawablePadding="20dp"
+            android:text="@string/shared_software"/>
+    <ImageView
+            android:id="@+id/setLine2"
+            android:layout_below="@id/sharedTv"
+            style="@style/setImage"/>
+
+    <TextView
+            android:id="@+id/aboutTv"
+            style="@style/setText"
+            android:drawableStart="@mipmap/more_cache"
+            android:drawablePadding="20dp"
+            android:layout_below="@id/setLine2"
+            android:text="@string/about_us"/>
+
+    <ImageView
+            android:id="@+id/setLine3"
+            android:layout_below="@id/aboutTv"
+            style="@style/setImage"/>
+
+    <TextView
+            android:id="@+id/versionTv"
+            style="@style/setText"
+            android:drawableStart="@mipmap/more_version"
+            android:drawablePadding="20dp"
+            android:layout_below="@id/setLine3"
+            android:text="@string/version_text"/>
+
+</RelativeLayout>

@@ -7,4 +7,10 @@
     <string name="dressing">穿衣</string>
     <string name="ultraviolet">实时紫外线</string>
     <string name="car_washing">洗车</string>
+    <string name="version_text">版本信息</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="about_us">关于我们</string>
+    <string name="shared_software">分享软件</string>
+    <string name="line">分隔线</string>
+    <string name="setting">设置</string>
 </resources>

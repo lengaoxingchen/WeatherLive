@@ -1,6 +1,7 @@
 package cn.testrunner.live.ui.weather
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,6 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import cn.testrunner.live.R
+import cn.testrunner.live.WeatherLiveApplication.Companion.context
 import cn.testrunner.live.logic.model.Weather
 import cn.testrunner.live.logic.model.getSky
 import kotlinx.android.synthetic.main.activity_weather.*
@@ -63,6 +65,11 @@ class WeatherActivity : AppCompatActivity() {
 
         navBtn.setOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
+        }
+
+        setBtn.setOnClickListener{
+            val intent = Intent(context, SetActivity::class.java)
+            startActivity(intent)
         }
 
         drawerLayout.addDrawerListener(object : DrawerLayout.DrawerListener {
